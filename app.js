@@ -8,6 +8,6 @@ app.use(bodyParser.json())
 const appRoute = require('./src/routes/route');
 app.use('/', appRoute);
 
-app.listen(8080, ()=>{
-    console.log('Server Berjalan di Port : 8080');
+app.listen(8000, ()=>{
+    console.log('Server Berjalan di Port : 8000');
 });

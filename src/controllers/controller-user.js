@@ -36,21 +36,62 @@ module.exports ={
             });
     },
 
-    getdatauserbyusername(req,res){
-        let id = req.params.id;
+    getdatauserlogin(req,res){
+        let username = req.body.username;
+        let password = req.body.password;
         //let namfoto;
             db.query(
                 `
                 SELECT * FROM tb_user WHERE username = ?;
                 `
-            , [id],
+            , [username],
             function (error, results) {
-                if(error) throw error;  
-                res.send({ 
-                    success: true, 
-                    message: 'Berhasil ambil data!',
-                    user: results,
-                });
+
+                // if (error) throw error;
+                //if(db.query.length){
+                    // res.send({ 
+                        //     success: true, 
+                        //     message: 'data anda tidak ada!',
+                        //     user: results,
+                        // });
+                        //}
+                        
+                        //  console.log(results);
+                        //  console.log(results.length);
+
+                results.forEach((data)=>{
+                    if (results.length >= 1) {
+                        if (username == `${data.username}` && password == `${data.password}`) {
+                            if(error) throw error;  
+                            res.send({ 
+                                success: true, 
+                                message: 'anda berhasil login!',
+                                user: results,
+                            });
+                        }else{
+                            if(error) throw error;
+                            res.send({ 
+                                success: false, 
+                                message: 'anda gagal login! password anda salah'
+                            })
+                        }
+                    } 
+                    // else if (!results.length) {
+                    //     if(error) throw error;
+                    //         res.send({ 
+                    //             success: false, 
+                    //             message: 'anda gagal login! username atau password anda salah'
+                    //         });
+                    // }
+                })
+                
+
+                // if(error) throw error;  
+                // res.send({ 
+                //     success: true, 
+                //     message: 'Berhasil ambil data!',
+                //     user: results,
+                // });
 
                 // console.log(results);
                 // console.log(`----------------------------------------------------------`);
@@ -91,7 +132,7 @@ module.exports ={
     },
 
     // Update data user
-    editdatauser(req,res){
+    editdatauser(req,res){b
         let id = req.params.id
         let namfoto
 

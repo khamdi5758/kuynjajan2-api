@@ -43,7 +43,7 @@ const upload = multer({
 
 router.get('/user/', user.getdatauser);
 router.get('/user/:id', user.getdatauserbyid);
-router.get('/user/:id', user.getdatauserbyusername);
+router.post('/user/login/', user.getdatauserlogin);
 router.post('/user/',upload.single('foto'), user.adddatauser);
 router.put('/user/:id',upload.single('foto'), user.editdatauser);
 router.delete('/user/:id', user.deletedatauser);
