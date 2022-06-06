@@ -112,7 +112,7 @@ module.exports ={
             nama : req.body.nama,
             jen_kel : req.body.jenkel,
             no_telp : req.body.notelp,
-            foto : req.file.filename,
+            foto : "defauluser.jpg",
             username : req.body.username,
             password : req.body.password
         }

@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { Router } = require('express');
 const multer = require('multer');
 const path = require('path');
 const {user,toko,kurir,dagangan,wishlist,orders } = require('../controllers');
@@ -39,7 +40,6 @@ const upload = multer({
 // POST localhost:8080/karyawan/add => Tambah data karyawan ke database
 // PUT localhost:8080/karyawan/edit/2 => Edit data karyawan berdasarkan id = 2
 // DELETE localhost:8080/karyawan/delete/2 => Delete data karyawan berdasarkan id = 2
-
 
 router.get('/user/', user.getdatauser);
 router.get('/user/:id', user.getdatauserbyid);
