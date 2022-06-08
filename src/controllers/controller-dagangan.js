@@ -13,7 +13,7 @@ module.exports ={
                 res.send({ 
                     success: true, 
                     message: 'Berhasil ambil data!',
-                    data: results 
+                    datadagangan: results 
                 });
             });
     },
@@ -30,7 +30,7 @@ module.exports ={
                 res.send({ 
                     success: true, 
                     message: 'Berhasil ambil data!',
-                    data: results
+                    datadagangan: results
                 });
             });
     },

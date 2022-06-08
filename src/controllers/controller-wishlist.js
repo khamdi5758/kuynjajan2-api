@@ -12,7 +12,7 @@ module.exports ={
                 res.send({ 
                     success: true, 
                     message: 'Berhasil ambil data!',
-                    data: results 
+                    datawishlist: results 
                 });
             });
     },
@@ -29,7 +29,7 @@ module.exports ={
                 res.send({ 
                     success: true, 
                     message: 'Berhasil ambil data!',
-                    data: results
+                    datawishlist: results
                 });
             });
     },

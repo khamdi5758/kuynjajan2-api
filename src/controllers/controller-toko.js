@@ -15,7 +15,7 @@ module.exports ={
                 res.send({ 
                     success: true, 
                     message: 'Berhasil ambil data!',
-                    data: results 
+                    datatoko: results 
                 });
             });
     },
@@ -32,7 +32,7 @@ module.exports ={
                 res.send({ 
                     success: true, 
                     message: 'Berhasil ambil data!',
-                    data: results
+                    datatoko: results
                 });
             });
     },
