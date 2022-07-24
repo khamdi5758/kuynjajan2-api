@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Router } = require('express');
 const multer = require('multer');
 const path = require('path');
-const {user,toko,kurir,dagangan,wishlist,orders } = require('../controllers');
+const {user,toko,kurir,dagangan,wishlist,orders,kulinertradisional } = require('../controllers');
 
 // const storage = multer.diskStorage({
 //     destination:'./src/images/',
@@ -75,6 +75,9 @@ router.post('/orders/', orders.adddataorders);
 router.put('/orders/:id', orders.editdataorders);
 router.delete('/orders/:id', orders.deletedataorders);
 
+
+router.get('/kulinertradisional/', kulinertradisional.getkulinertradisional);
+router.get('/kulinertradisionals/:id', kulinertradisional.getkulinertradisionalbyid);
 // router.get('/kurir/get', kurir.getdatakurir);
 // router.get('/kurir/get/:id', kurir.getdatakurirbyid);
 // router.post('/kurir/add',upload.single('foto_ktp'), kurir.adddatakurir);

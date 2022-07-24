@@ -5,8 +5,9 @@ const kurir = require('./controller-kurir');
 const dagangan = require('./controller-dagangan');
 const wishlist = require('./controller-wishlist');
 const orders = require('./controller-orders');
+const kulinertradisional = require('./controller-kulinertradisional');
 
 
 module.exports ={
-	user,toko,kurir,dagangan,wishlist,orders
+	user,toko,kurir,dagangan,wishlist,orders,kulinertradisional
 };
